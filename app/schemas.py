@@ -2,36 +2,42 @@
 
 from pydantic import BaseModel
 from datetime import date
+from typing import List, Optional
 
 # Esquema para crear una mascota (entrada)
 class MascotaCreate(BaseModel):
     nombre: str
-    nombre_dueño: str
     fecha_nacimiento: date
     diagnostico: str
     peso: float
     altura: float
     fecha_ingreso: date
     tipo_sangre: str
-    carnet_vacuna: str
-    tipo_sexo: str
-    tipo_raza: str
-
-# Esquema para devolver una mascota (salida)
-class Mascota(BaseModel):
-    id: int
-    nombre: str
-    nombre_dueño: str
-    fecha_nacimiento: date
-    diagnostico: str
-    peso: float
-    altura: float
-    fecha_ingreso: date
-    tipo_sangre: str
-    carnet_vacuna: str
+    carnet_vacuna: bool
     tipo: str
     sexo: str
     raza: str
+
+# Esquema para el dueño
+class DueñoCreate(BaseModel):
+    nombre: str
+    telefono: Optional[str] = None
+    direccion: Optional[str] = None
+    correo: Optional[str] = None
+    contacto_emergencia: Optional[str] = None
+
+# Esquema para devolver una mascota (salida)
+class Mascota(MascotaCreate):
+    id: int
+    dueños: List[Optional[int]]  # IDs de los dueños relacionados
+
+    class Config:
+        orm_mode = True
+
+# Esquema para devolver un dueño (salida)
+class Dueño(DueñoCreate):
+    id: int
+    mascotas: List[Optional[int]]  # IDs de las mascotas relacionadas
 
     class Config:
         orm_mode = True
