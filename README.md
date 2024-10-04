@@ -28,19 +28,19 @@
 ### Planificación de Sprints
 
 Con estas historias de usuario, podemos organizar los sprints de la siguiente manera:
-#####Sprint 1:
+##### Sprint 1:
 
 1. Desarrollo de la funcionalidad de registro y edición de pacientes (historias 1, 2).
 
 2. Diseño básico de la gestión de citas (historia 4).
 
-#####Sprint 1:
+##### Sprint 1:
 
 1. Implementación de la programación de citas y envío de recordatorios (historias 5, 6).
 
 2. Creación del registro y acceso a historias clínicas (historias 7, 8).
 
-#####Sprint 2:
+##### Sprint 2:
 
 1. Desarrollo de la comunicación con los dueños (historias 10, 11).
 
