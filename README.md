@@ -1,4 +1,4 @@
-# Equipo 1: Gestión de Pacientes (registro de animales y sus dueños).
+## Equipo 1: Gestión de Pacientes (registro de animales y sus dueños).
 
 ### Historias de Usuario
 ##### Historia de Usuario 1:
