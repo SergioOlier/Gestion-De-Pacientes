@@ -14,16 +14,13 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 # Base de modelos de SQLAlchemy
 Base = declarative_base()
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+# Para crear las tablas
+def init_db():
+    Base.metadata.create_all(bind=engine)
 
 
 
-# Verificar conexión
+# Verificar la conexión de la db
 """
 def verify_connection():
     try:
