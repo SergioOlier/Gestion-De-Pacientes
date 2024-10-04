@@ -4,7 +4,7 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
 from .routers import mascotas, dueños
 from . import crud, models, schemas
-from .database import SessionLocal, engine, init_db
+from .database import SessionLocal, engine, init_db, get_db
 
 # Crear las tablas en la base de datos
 init_db()
