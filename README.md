@@ -1,3 +1,9 @@
+#### Ejecutar
+- pip install -r requirements.txt (Para instalar todas las dependencias)
+- uvicorn app.main:app --reload (para ejecutar la aplicacion)
+
+------------
+
 ## Equipo 1: Gestión de Pacientes (registro de animales y sus dueños).
 
 ### Historias de Usuario
