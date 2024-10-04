@@ -40,4 +40,4 @@ class Dueño(DueñoCreate):
     mascotas: List[Optional[int]]  # IDs de las mascotas relacionadas
 
     class Config:
-        orm_mode = True
+        from_attributes = True
