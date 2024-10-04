@@ -46,7 +46,7 @@ Con estas historias de usuario, podemos organizar los sprints de la siguiente ma
 
 2. Pruebas automáticas de funcionalidades desarrolladas (historia 13).
 
-#####Sprint 2:
+##### Sprint 2:
 
 1. Integración de todas las funcionalidades (historia 14).
 
