@@ -15,14 +15,6 @@ app = FastAPI()
 app.include_router(mascotas.router, prefix="/mascotas", tags=["mascotas"])
 app.include_router(dueños.router, prefix="/dueños", tags=["dueños"])
 
-# Dependencia para obtener la sesión de base de datos
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
-
 # Ruta de prueba
 @app.get("/")
 def read_root():
