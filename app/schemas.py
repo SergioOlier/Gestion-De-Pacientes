@@ -32,7 +32,7 @@ class Mascota(MascotaCreate):
     dueños: List[Optional[int]]  # IDs de los dueños relacionados
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 # Esquema para devolver un dueño (salida)
 class Dueño(DueñoCreate):
