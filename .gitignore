@@ -1,0 +1,36 @@
+# Archivos de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Entorno virtual
+venv/
+env/
+ENV/
+.venv/
+.ENV/
+
+# Archivos de configuración de VSCode
+.vscode/
+.idea/
+
+# Archivos de logs
+*.log
+
+# Archivos de bases de datos locales
+*.db
+*.sqlite
+
+# Archivos de configuración sensible
+.env
+
+# Dependencias instaladas
+*.egg-info/
+.Python
+pip-log.txt
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db

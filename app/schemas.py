@@ -1,0 +1,1 @@
+#Esquemas de Pydantic para validar y serializar los datos.
