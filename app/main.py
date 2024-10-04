@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.orm import Session
-
+from .routers import mascotas, dueños
 from . import crud, models, schemas
 from .database import SessionLocal, engine, init_db
 
@@ -11,6 +11,9 @@ init_db()
 
 # Instancia de la aplicación FastAPI
 app = FastAPI()
+
+app.include_router(mascotas.router, prefix="/mascotas", tags=["mascotas"])
+app.include_router(dueños.router, prefix="/dueños", tags=["dueños"])
 
 # Dependencia para obtener la sesión de base de datos
 def get_db():
